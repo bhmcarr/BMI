@@ -10,7 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var weightField: UITextField!
-    @IBOutlet weak var heightField: UITextField!
+    @IBOutlet weak var feetField: UITextField!
+    @IBOutlet weak var inchField: UITextField!
+    
+    
     @IBOutlet weak var resultField: UILabel!
     @IBOutlet weak var statusField: UILabel!
     
@@ -18,17 +21,23 @@ class ViewController: UIViewController {
         // close the keyboard upon hitting the button,
         // from either text field (this is clunky)
         weightField.resignFirstResponder()
-        heightField.resignFirstResponder()
-        let weight: String = weightField.text!
-        let height: String = heightField.text!
+        feetField.resignFirstResponder()
+        inchField.resignFirstResponder()
 
-        print("Weight: \(weight)")
-        print("Height: \(height)")
+        let weight: String = weightField.text!
+        let feet: String = feetField.text!
+        let inches: String = inchField.text!
         
         let doubleWeight = Double(weight)
-        let doubleHeight = Double(height)
+        let doubleFeet = Double(feet)
+        let doubleInches = Double(inches)
         
-        let bmi: Double = calcBMI(weight: doubleWeight!, height: doubleHeight!)
+        let doubleHeight = (12 * doubleFeet!) + doubleInches!
+        
+        print("Weight: \(weight)")
+        print("Height: \(feet)ft \(inches)in")
+        
+        let bmi: Double = calcBMI(weight: doubleWeight ?? 0, height: doubleHeight ?? 0)
         
         resultField.text = String(round(10*bmi)/10)
         
@@ -51,11 +60,17 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    
     func calcBMI(weight: Double, height: Double) -> Double{
         let bmi : Double = 703 * weight / pow(height,2)
         print("BMI: \(bmi)")
         return bmi
+    }
+    @IBAction func resetButtonPressed(_ sender: UIButton) {
+        weightField.text = ""
+        feetField.text = ""
+        inchField.text = ""
+        resultField.text = "0"
+        statusField.text = ""
     }
     
 }
