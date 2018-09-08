@@ -13,9 +13,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var feetField: UITextField!
     @IBOutlet weak var inchField: UITextField!
     
-    
     @IBOutlet weak var resultField: UILabel!
     @IBOutlet weak var statusField: UILabel!
+    
+    @IBOutlet weak var resetButton: UIButton!
     
     @IBAction func calcButtonPressed(_ sender: UIButton) {
         // close the keyboard upon hitting the button,
@@ -53,11 +54,14 @@ class ViewController: UIViewController {
         else{
             statusField.text = "Underweight"
         }
+        
+        resetButton.isHidden = false
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        resetButton.isHidden = true
     }
     
     func calcBMI(weight: Double, height: Double) -> Double{
@@ -71,6 +75,8 @@ class ViewController: UIViewController {
         inchField.text = ""
         resultField.text = "0"
         statusField.text = ""
+        
+        resetButton.isHidden = true
     }
     
 }

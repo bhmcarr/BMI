@@ -135,6 +135,7 @@
                     <connections>
                         <outlet property="feetField" destination="e9t-u1-GPd" id="dre-19-z0L"/>
                         <outlet property="inchField" destination="WA8-BW-7Cm" id="6xP-o8-2zg"/>
+                        <outlet property="resetButton" destination="lW3-Zf-M84" id="ZoM-u8-TVV"/>
                         <outlet property="resultField" destination="jaM-pC-MBQ" id="4kr-8j-NVd"/>
                         <outlet property="statusField" destination="SYX-gQ-Jfa" id="XKt-GT-KYc"/>
                         <outlet property="weightField" destination="b2j-Ze-oee" id="KDD-6V-ztL"/>
@@ -164,11 +165,11 @@
                                 <rect key="frame" x="16" y="93" width="343" height="528"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <mutableString key="text">BMI is a useful measure of overweight and obesity. It is calculated from your height and weight. BMI is an estimate of body fat and a good gauge of your risk for diseases that can occur with more body fat. The higher your BMI, the higher your risk for certain diseases such as heart disease, high blood pressure, type 2 diabetes, gallstones, breathing problems, and certain cancers.
+                                <string key="text">BMI is a useful measure of overweight and obesity. It is calculated from your height and weight. BMI is an estimate of body fat and a good gauge of your risk for diseases that can occur with more body fat. The higher your BMI, the higher your risk for certain diseases such as heart disease, high blood pressure, type 2 diabetes, gallstones, breathing problems, and certain cancers.
 Although BMI can be used for most men and women, it does have some limits:
 It may overestimate body fat in athletes and others who have a muscular build.
 It may underestimate body fat in older persons and others who have lost muscle.
-</mutableString>
+</string>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
